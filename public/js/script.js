@@ -77,11 +77,11 @@ function updateGamestate() {
         var boardSquare = document.getElementById(square)
 
         //set element attributes
-        if (gameBoard[square] = "X") {
+        if (gameBoard[square] == "X") {
             boardSquare.setAttribute("class", "btn btn-primary")
             boardSquare.setAttribute("value", "X")
             boardSquare.disabled = true
-        } else if (gameBoard[square] = "O") {
+        } else if (gameBoard[square] == "O") {
             boardSquare.setAttribute("class", "btn btn-danger")
             boardSquare.setAttribute("value", "O")
             boardSquare.disabled = true

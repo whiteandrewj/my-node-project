@@ -1,0 +1,33 @@
+when a button is selected
+  change it to disabled, add appropriate player's symbol, change styling
+  
+
+player1 - blue, X
+player2 - red, O
+
+
+I need a data structure that can track the game state, then apply styling based on that
+  whenever the turn changes, need to switch "unselected" stylings 
+
+need a variable to track playerTurn
+
+each "button" can have three states:
+  player1 owned
+  player2 owned
+  unowned
+
+after each turn, evaluate to see whether either player has won.
+8 possible victory conditions:
+  a1,a2,a3
+  b1,b2,b3
+  c1,c2,c3
+  a1,b1,c1
+  a2,b2,c2
+  a3,b3,c3
+  a1,b2,c3
+  a3,b2,c1
+
+if all squares are claimed and no winner, then declare a draw
+
+
+have a reset/restart button
