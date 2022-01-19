@@ -1,24 +1,24 @@
 const gameState = {
-    "playerTurn": "O",
-    "gameBoard": {
-        "a1": null,
-        "a2": null,
-        "a3": null,
-        "b1": null,
-        "b2": null,
-        "b3": null,
-        "c1": null,
-        "c2": null,
-        "c3": null
+    playerTurn: "O",
+    gameBoard: {
+        a1: null,
+        b1: null,
+        c1: null,
+        a2: null,
+        b2: null,
+        c2: null,
+        a3: null,
+        b3: null,
+        c3: null
     }
-};
+}
 
 var a1 = document.getElementById("a1").addEventListener("click", e => {
-    Object.defineProperties(gameBoard["a1"]) = "X"
+    Object.defineProperty(gameState.gameBoard,"a1",{value : "X"});
     updateGamestate();
 })
 var b1 = document.getElementById("b1").addEventListener("click", e => {
-    Object.defineProperties(gameState.gameBoard["b1"]) = "X"
+    gameState.gameBoard["b1"] = "X";
     updateGamestate();
 })
 var c1 = document.getElementById("c1").addEventListener("click", e => {
@@ -71,17 +71,18 @@ c1.addEventListener("click", e => {
 
 function updateGamestate() {
     //iterate over gameBoard object
-    for (var square of Object.keys(gameState.gameBoard)) {
+    for (var gameSpaceId of Object.keys(gameState.gameBoard)) {
 
+        console.log(gameSpaceId)
         //get html element
-        var boardSquare = document.getElementById(square)
+        var boardSquare = document.getElementById(gameSpaceId)
 
         //set element attributes
-        if (gameBoard[square] == "X") {
+        if (gameState.gameBoard[gameSpaceId] == "X") {
             boardSquare.setAttribute("class", "btn btn-primary")
             boardSquare.setAttribute("value", "X")
             boardSquare.disabled = true
-        } else if (gameBoard[square] == "O") {
+        } else if (gameState.gameBoard[gameSpaceId] == "O") {
             boardSquare.setAttribute("class", "btn btn-danger")
             boardSquare.setAttribute("value", "O")
             boardSquare.disabled = true

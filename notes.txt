@@ -31,3 +31,8 @@ if all squares are claimed and no winner, then declare a draw
 
 
 have a reset/restart button
+
+what is minimum viable product?
+  able to play hotseat
+  have a reset button
+  
