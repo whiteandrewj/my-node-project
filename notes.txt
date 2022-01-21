@@ -1,5 +1,7 @@
 when a button is selected
-  change it to disabled, add appropriate player's symbol, change styling
+  update value in json object
+  update html element - change button to disabled, add appropriate player's symbol, change styling
+  change player turn
   
 
 player1 - blue, X
